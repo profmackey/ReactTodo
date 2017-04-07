@@ -1,13 +1,15 @@
 import firebase from 'firebase';
+
 try {
   var config = {
-    apiKey: "AIzaSyB45tqJnlAzQ1H0XNU5tSxPjJ3vUmBpw5I",
-    authDomain: "udemy-todo-app-bdc89.firebaseapp.com",
-    databaseURL: "https://udemy-todo-app-bdc89.firebaseio.com",
-    projectId: "udemy-todo-app-bdc89",
-    storageBucket: "udemy-todo-app-bdc89.appspot.com",
-    messagingSenderId: "498598668471"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MSG_SENDER_ID
   };
+  
   firebase.initializeApp(config);
 } catch (e) {
 
